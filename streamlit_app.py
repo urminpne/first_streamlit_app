@@ -43,8 +43,7 @@ my_data_rows = my_cur.fetchall()
 streamlit.text("The fruit load list contains::")
 streamlit.text(my_data_rows)
 
-# Allow the end user to add a fruit to the list
-add_my_fruit=streamlit.text('what fruit would you like to add?')
+
 
 
 #this will not work correctly, but just go with it for now
