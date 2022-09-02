@@ -56,16 +56,6 @@ if streamlit.button ('get fruit load list'):
            
    my_data_rows = get_fruit_load_list()
    streamlit.dataframe(my_data_rows) 
-#import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
-
-# take the jason version of the response and normalize it 
-fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-# write your own comment - what does this do?
-streamlit.dataframe(fruityvice_normalized)
-
-#don't run anything past here while we troubleshoot
-streamlit.stop()
 
 # allow the end user to add a fruit to the list
 def insert_row_snowflake(new_fruit):
